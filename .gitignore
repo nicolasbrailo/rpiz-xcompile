@@ -1,3 +1,7 @@
+*.img
+mnt
+hello
+
 # Prerequisites
 *.d
 
