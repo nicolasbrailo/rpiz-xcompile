@@ -30,8 +30,8 @@ if [ ! -d "$PKG_EXTRACT_DIR" ]; then
     dpkg-deb -R "$PKG_CACHE/$PKG_FNAME" "$PKG_EXTRACT_DIR"
 fi
 
-sudo cp -r "$PKG_EXTRACT_DIR/usr/include/" "$SYSROOT_DIR/mnt/usr/include"
-sudo cp -r "$PKG_EXTRACT_DIR/usr/lib/"     "$SYSROOT_DIR/mnt/usr/lib"
-sudo cp -r "$PKG_EXTRACT_DIR/usr/share/"   "$SYSROOT_DIR/mnt/usr/share"
+sudo cp -r "$PKG_EXTRACT_DIR/usr/include/"* "$SYSROOT_DIR/mnt/usr/include"
+sudo cp -r "$PKG_EXTRACT_DIR/usr/lib/"*     "$SYSROOT_DIR/mnt/usr/lib"
+sudo cp -r "$PKG_EXTRACT_DIR/usr/share/"*   "$SYSROOT_DIR/mnt/usr/share"
 
 echo "[re]installed $PKG_URL to sysroot"
